@@ -1,0 +1,100 @@
+[{
+    title : '@@app.mobilePushNotificationAuditTrail.config@@',
+    properties : [{
+        name : 'base',
+        label : '@@app.mobilePushNotificationAuditTrail.baseUrl@@',
+        type : 'textfield',
+        description : '@@app.mobilePushNotificationAuditTrail.baseUrl.desc@@',
+        required : 'True'
+    },
+    {
+        name : 'title',
+        label : '@@app.mobilePushNotificationAuditTrail.title@@',
+        type : 'textfield',
+        value : 'New Task: #assignment.activityName#'
+    },
+    {
+        name : 'body',
+        label : '@@app.mobilePushNotificationAuditTrail.body@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '15',
+        value : 'A new task has been created by the process #assignment.processName#'
+    }]
+},
+{
+    title : '@@app.mobilePushNotificationAuditTrail.notificationLink@@',
+    properties : [{
+        name : 'url',
+        label : '@@app.mobilePushNotificationAuditTrail.url@@',
+        type : 'textfield'
+    },
+    {
+        name : 'urlName',
+        label : '@@app.mobilePushNotificationAuditTrail.urlName@@',
+        type : 'textfield'
+    },
+    {
+        name : 'parameterName',
+        label : '@@app.mobilePushNotificationAuditTrail.parameterName@@',
+        description : '@@app.mobilePushNotificationAuditTrail.parameterName.desc@@',
+        type : 'textfield',
+        value : 'activityId'
+    },
+    {
+        name : 'passoverMethod',
+        label : '@@app.mobilePushNotificationAuditTrail.passoverMethod@@',
+        type : 'selectbox',
+        value : 'param',
+        options : [{
+            value : 'none',
+            label : '@@app.mobilePushNotificationAuditTrail.passoverMethod.none@@'
+        },
+        {
+            value : 'append',
+            label : '@@app.mobilePushNotificationAuditTrail.passoverMethod.append@@'
+        },
+        {
+            value : 'param',
+            label : '@@app.mobilePushNotificationAuditTrail.passoverMethod.param@@'
+        }]
+    }]
+},
+{
+    title : '@@app.mobilePushNotificationAuditTrail.advanced@@',
+    properties : [{
+        name : 'exclusion',
+        label : '@@app.mobilePushNotificationAuditTrail.activityExclusion@@',
+        type : 'multiselect',
+        size : '10',
+        options_ajax : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.app.lib.UserNotificationAuditTrail/service?action=getActivities'
+    },
+    {
+        name : 'mobileServerUrl',
+        label : '@@app.mobilePushNotificationAuditTrail.mobileServerUrl@@',
+        type : 'textfield',
+        required : 'True',
+        value: 'https://mobile.cloud.joget.com/jw'
+    },
+    {
+        name : 'webServiceKey',
+        label : '@@app.mobilePushNotificationAuditTrail.webServiceKey@@',
+        type : 'textfield',
+        required : 'False'
+    },
+    {
+        name:'extraData',
+        label:'@@app.mobilePushNotificationAuditTrail.extraData@@',
+        type:'grid',
+        columns:[{
+            key:'key',
+            label:'@@app.mobilePushNotificationAuditTrail.extraData.key@@',
+            required : 'True'
+        },
+        {
+            key:'value',
+            label:'@@app.mobilePushNotificationAuditTrail.extraData.value@@',
+            required : 'True'
+        }]
+    }]
+}]

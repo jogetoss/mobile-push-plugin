@@ -1,0 +1,74 @@
+[{
+    title : '@@app.mobilePushPlugin.config@@',
+    properties : [{
+        name : 'serviceAccountJson',
+        label : '@@app.mobilePushPlugin.serviceAccountJson@@',
+        type : 'textarea',
+        required : 'True'
+    },
+    {
+        name : 'databaseName',
+        label : '@@app.mobilePushPlugin.databaseName@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'to',
+        label : '@@app.mobilePushPlugin.to@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'userId',
+        label : '@@app.mobilePushPlugin.userId@@',
+        type : 'textfield',
+        required : 'False'
+    },
+    {
+        name : 'title',
+        label : '@@app.mobilePushPlugin.title@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'body',
+        label : '@@app.mobilePushPlugin.body@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'url',
+        label : '@@app.mobilePushPlugin.url@@',
+        type : 'textfield',
+        required : 'False'
+    },
+    {
+        name : 'ios',
+        label : '@@app.mobilePushPlugin.ios@@',
+        type : 'textfield',
+        required : 'False'
+    },
+    {
+        name:'extraData',
+        label:'@@app.mobilePushPlugin.extraData@@',
+        type:'grid',
+        columns:[{
+            key:'key',
+            label:'@@app.mobilePushPlugin.extraData.key@@',
+            required : 'True'
+        },
+        {
+            key:'value',
+            label:'@@app.mobilePushPlugin.extraData.value@@',
+            required : 'True'
+        }]
+    }]
+},{
+    title : '@@app.mobilePushPlugin.advanced@@',
+    properties : [{
+        name : 'webServiceKey',
+        label : '@@app.mobilePushPlugin.webServiceKey@@',
+        type : 'password',
+        required : 'False'
+    }]
+}]

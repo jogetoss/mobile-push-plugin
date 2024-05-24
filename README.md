@@ -1,6 +1,7 @@
 # Description
+The Mobile Push Notification plugin is similar to the User Notification email plugin, but it sends push notifications to your mobile phone instead of emails when a user receives a new pending task assignment. Additionally, the Joget Mobile Server App (JMS) is included in this repository.
 
-This repository is meant to serve as a general template for how to set up new repositories in the JogetOSS organization. 
+Do read [Joget Native Mobile App > Push Notifications](https://dev.joget.org/community/display/DX8/Native+Mobile+App#:~:text=on%20the%20(%20%2D%20)%C2%A0button.-,Push%20Notifications,-The%20Joget%20Mobile) for more information.
 
 # Getting Help
 
