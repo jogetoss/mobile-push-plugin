@@ -13,8 +13,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.0.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -45,7 +45,7 @@
                     <instructions>
                         <!-- Change package and plugin class here -->
                         <Export-Package>org.joget</Export-Package>
-                        <Private-Package>org.joget.*</Private-Package>
+                        <Private-Package>{local-packages}</Private-Package>
                         <Bundle-Activator>org.joget.mobile.Activator</Bundle-Activator>
                         <Import-Package>!*,org.joget.report.dao,org.joget.report.model,org.joget.report.service,org.joget.commons.util,org.joget.plugin.base,org.joget.plugin.property.model,org.joget.plugin.property.service,org.joget.directory.model,org.joget.directory.model.service,org.joget.directory.dao,org.joget.workflow.model,org.joget.workflow.model.dao,org.joget.workflow.model.service,org.joget.workflow.util,org.joget.apps.app.dao,org.joget.apps.app.lib,org.joget.apps.app.model,org.joget.apps.app.service,org.joget.apps.datalist.lib,org.joget.apps.datalist.model,org.joget.apps.datalist.service,org.joget.apps.form.lib,org.joget.apps.form.dao,org.joget.apps.form.model,org.joget.apps.form.service,org.joget.apps.list.service,org.joget.apps.userview.lib,org.joget.apps.userview.model,org.joget.apps.userview.service,org.joget.apps.workflow.lib,javax.servlet,javax.servlet.http,org.osgi.framework;version="1.3.0"</Import-Package>
                         <!-- End change package and plugin class here -->
@@ -68,20 +68,14 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring</artifactId>
-            <version>2.5.6.SEC03</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>2.5.6.SEC03</version>
+            <version>5.3.39</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.joget</groupId>
             <artifactId>wflow-core</artifactId>
-            <version>8.0-SNAPSHOT</version>
+            <version>8.2-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.servlet</groupId>
